@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContaPunti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div id="player1" class="player-section">
+            <input type="text" id="player1Name" value="Player 1">
+            <div class="score" id="player1Score">0</div>
+        </div>
+        <div class="reset-section">
+            <button id="resetButton">↻</button>
+        </div>
+        <div id="player2" class="player-section">
+            <input type="text" id="player2Name" value="Player 2">
+            <div class="score" id="player2Score">0</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+</body>
+</html>
